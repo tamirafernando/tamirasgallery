@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamira's Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: #8b6f47;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #5a4a3a;
+            margin-bottom: 40px;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            aspect-ratio: 1;
+            background: #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .gallery-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .gallery-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .gallery-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .gallery-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .gallery-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e8d4c0 0%, #d4c0ac 100%);
+            color: #8b6f47;
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+
+        .about-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #8b6f47;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: #5a4a3a;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .about-section h2 {
+                font-size: 2rem;
+            }
+
+            .about-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1 class="title">Tamira's Gallery</h1>
+            <p class="subtitle">Moments from my life, studies, and adventures</p>
+        </div>
+
+        <div class="gallery">
+            <!-- Picture 1: Professional/Career -->
+            <div class="gallery-item">
+                <div class="placeholder">📚</div>
+            </div>
+
+            <!-- Picture 2: Personal Interest -->
+            <div class="gallery-item">
+                <div class="placeholder">✨</div>
+            </div>
+
+            <!-- Picture 3: Travel/Dubai -->
+            <div class="gallery-item">
+                <div class="placeholder">🌍</div>
+            </div>
+
+            <!-- Picture 4: Los Angeles -->
+            <div class="gallery-item">
+                <div class="placeholder">🌴</div>
+            </div>
+
+            <!-- Picture 5: Memories -->
+            <div class="gallery-item">
+                <div class="placeholder">💫</div>
+            </div>
+
+            <!-- Picture 6: Adventures -->
+            <div class="gallery-item">
+                <div class="placeholder">🎯</div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>
+                Welcome to my gallery! I'm an international student from Dubai, currently studying in Los Angeles, California. 
+                This space celebrates my professional journey, personal interests, and the incredible experiences I've had 
+                along the way. Explore my world through moments, achievements, and the memories that matter most.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
